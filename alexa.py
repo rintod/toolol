@@ -14,8 +14,8 @@ def aleXa(domain):
       print ''
       print 'Domain        : ' + domain
       print 'Global Rank   : ' + result[1]
-      print 'Country       : ' + result2[0]
-      print 'Country Code  : ' + result2[1]
+      print 'Country       : ' + result2[1]
+      print 'Country Code  : ' + result2[0]
       print 'Local Rank    : ' + result2[2]
       print '=============================='
   else:
