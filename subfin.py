@@ -1,5 +1,5 @@
 # Coded By Con7ext
-# Thanks 0Byte
+# Thanks ZeroByte
 # Python 2.7
 import urllib2
 import re
