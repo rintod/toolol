@@ -1,7 +1,5 @@
 <?php
 // Created By Rinto AR
-// Trace.moe API >:( 
-// WHATANIME IS IT?
 class WHATANIMEAPI{
   var $image, $ch, $mime, $ext, $req, $getData;
   function cUrlGetData($url, $post_fields = null, $headers = null) {
@@ -48,14 +46,19 @@ class WHATANIMEAPI{
     $this->image = $this->ConvertIT($this->req);
     $this->getData = $this->cUrlGetData("https://trace.moe/api/search", "{\"image\":\"{$this->image}\"}");
     $json = json_decode($this->getData, true);
-    for($i = 0; $i <= $json["limit"]; $i++){
-      $imagesss = "https://trace.moe/thumbnail.php?anilist_id=".$json["docs"][$i]["anilist_id"]."&file=".$json["docs"][$i]["filename"]."&t=".$json["docs"][$i]["at"]."&token=".$json["docs"][$i]["tokenthumb"];
-      echo "<b>Image         </b>: ".$imagesss."<br>";
-      echo "<b>Title English </b>: ".$json["docs"][$i]["title_english"]."<br>";
-      echo "<b>Title Japanese</b>: ".$json["docs"][$i]["title_romaji"]."<br>";
-      echo "<b>From Episode  </b>: ".$json["docs"][$i]["episode"]."<br>";
-      echo "<b>Similarity    </b>: ".round((float)$json["docs"][$i]["similarity"] * 100)."%<br>";
-      echo "<b>Mal ID        </b>: ".$json["docs"][$i]["mal_id"]."<br><br>";
+    if($this->req){
+      for($i = 0; $i <= $json["limit"]; $i++){
+        $imagesss = "https://trace.moe/thumbnail.php?anilist_id=".$json["docs"][$i]["anilist_id"]."&file=".$json["docs"][$i]["filename"]."&t=".$json["docs"][$i]["at"]."&token=".$json["docs"][$i]["tokenthumb"];
+        echo "<b>Image         </b>: ".$imagesss."<br>";
+        echo "<b>Title English </b>: ".$json["docs"][$i]["title_english"]."<br>";
+        echo "<b>Title Japanese</b>: ".$json["docs"][$i]["title_romaji"]."<br>";
+        echo "<b>From Episode  </b>: ".$json["docs"][$i]["episode"]."<br>";
+        echo "<b>Similarity    </b>: ".round((float)$json["docs"][$i]["similarity"] * 100)."%<br>";
+        echo "<b>Mal ID        </b>: ".$json["docs"][$i]["mal_id"]."<br><br>";
+      }
+    }
+    else{
+      echo "<br>Please Usage: file.php?url=IMAGE_URL";
     }
   }
 }
