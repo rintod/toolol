@@ -1,5 +1,6 @@
 <?php
 ## Codename : PlanTSec Project
+## Some Function From Con7ext Shell
 session_start();
 set_time_limit(0);
 error_reporting(0);
