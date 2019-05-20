@@ -1,7 +1,5 @@
 <?php
-## Author   : Rinto AR
 ## Codename : PlanTSec Project
-## Please don't delete Author :D
 session_start();
 set_time_limit(0);
 error_reporting(0);
