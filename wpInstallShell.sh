@@ -55,7 +55,6 @@ upload(){
 	echo "Success Uploading Shell $site/wp-content/uploads/$TAHUN/$BULAN/$shell"
 	else
 	echo "Failed Try Manual"
-	echo "$ups"
 	fi
 	rm "$COOKIE_LOG" 2> /dev/null
 }
