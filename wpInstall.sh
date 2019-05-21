@@ -38,6 +38,7 @@ login(){
 	else
 	printf "$red[-]Login Failed$white\n"
 	fi
+	rm "$COOKIE_PATH" 2> /dev/null
 }
 echo "Wp Install Mass Exploit"
 echo "File Argumen is for save file :D just put your filename :D"
