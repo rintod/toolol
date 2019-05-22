@@ -1,4 +1,5 @@
 #!/bin/bash
+#Coded By Con7ext
 green='\e[92m'
 blue='\e[34m'
 red='\e[31m'
