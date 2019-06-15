@@ -1,5 +1,6 @@
 <?php
 // RINTOD
+// php uni.php list=list.txt
 parse_str(implode("&", array_slice($argv, 1)), $_GET);
 $list = @$_GET["list"];
 $meong = explode("\n", file_get_contents($list));
